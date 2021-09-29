@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Sign Up Student</title>
+<style>
+
+    .c1{
+            width : 50%;
+    }
+
+
+</style>
+
+</head>
+
+<body>
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
+    <header class="header">
+        <br>
+        <div class="container c1">
+          <h1 class="site-title">Course Registration System</h1>
+      </div>
+    </header>
+
+    <br>
+    
+    <div class="container c1">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        </nav>
+    </div>
+
+    <br>
+    <div class ="header">
+        <div class="container c1">
+       <h2 class="site-title" id="Sign Up">Sign up Student</h2>
+       <hr>
+    </div>
+    </div>
+
+    <div class="container c1">
+    <form>
+        <div class="form-group">
+          <label for="Student_id">Student Id</label>
+          <input type="text" class="form-control" id="Student_id" placeholder="Enter Your ID">
+        </div>
+       
+        <div class="form-group">
+          <label for="Student_name">Student Name</label>
+          <input type="text" class="form-control" id="Student_name" placeholder="Enter Your Name">
+        </div>
+
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="text" class="form-control" id="Email" placeholder="Enter Email ID">
+          </div>
+
+          <div class="form-group">
+            <label for="Gender"> Gender</label>
+            <label class="radio-inline">
+                <input type="radio" name="optradioM"  value="M" style="padding: 5px;">Male
+              </label>
+              &nbsp;
+              <label class="radio-inline">
+                <input type="radio"  name="optradioF" value ="F" style="padding: 5px;" >Female
+              </label>
+          </div>
+
+          <div class="form-group">
+            <label for="DOB">Date of Birth</label>
+            <!-- <input type="text" class="form-control" id="SemesterID" placeholder="Select Date of Birth ID"> -->
+                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+          </div>
+
+          <div class="form-group">
+            <label for="SemesterID"> Semester </label>&nbsp;&nbsp;
+            <select  class="form-select form-select-lg" aria-label="semester" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="password">New password</label>
+            <input type="password" class="form-control" id="newPass" placeholder="Enter New password">
+          </div> 
+
+          <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" class="form-control" id="oldPass" placeholder="Confirm Password">
+          </div>
+
+        <button class="btn btn-dark"  type="submit" value="Submit">Submit</button>
+        &nbsp;
+        <button class="btn btn-danger"  type="cancel" value="Cancel">Cancel</button>
+    </form>
+    </div>
+
+    <hr>
+    <br>
+</div>
+
+
+    
+</body>
+
+<script>
+    $(document).ready(function(){
+      var date_input=$('input[name="date"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'mm/dd/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
+</script>
+</html>
