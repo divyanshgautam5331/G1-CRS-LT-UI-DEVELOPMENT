@@ -1,7 +1,7 @@
 <br>
 <div class ="header">
     <div class="container">
-    <h2 class="site-title" id="registercourse">Register Course</h2>
+    <h2 class="site-title" id="registercourse">View Registered Course</h2>
 </div>
 </div>
 <div class="container">
@@ -11,10 +11,10 @@
       <input type="text" class="form-control" id="SemesterID" placeholder="Enter Semester ID">
     </div>
    
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="CourseID">Course ID</label>
       <input type="text" class="form-control" id="CourseID" placeholder="Enter Course ID">
-    </div>
+    </div> -->
     <button class="btn btn-dark"  type="submit" value="Submit">Submit</button>
   </form>
 </div>
@@ -24,7 +24,7 @@
 
 <div class ="header">
     <div class="container">
-    <h2 class="site-title" id="listofcourse">List of Available Courses</h2>
+    <h2 class="site-title" id="listofcourse">List of Registered Courses</h2>
 </div>
 
 <div class="container">
@@ -35,7 +35,7 @@
             <th scope="col">Course Name</th>
             <th scope="col">Course Details</th>
             <th scope="col">Course Fee</th>
-            
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -44,18 +44,21 @@
             <td>Java</td>
             <td>Full Time</td>
             <td>5000</td>
+            <td><button type="button" class="btn btn-danger btn-sm"> Remove </button></td>
           </tr>
           <tr>
             <th scope="row">102</th>
             <td>Python</td>
             <td>Full Time</td>
             <td>3000</td>
+            <td><button type="button" class="btn btn-danger btn-sm"> Remove </button></td>
           </tr>
           <tr>
             <th scope="row">103</th>
             <td>Angular</td>
             <td>Full Time</td>
             <td>5000</td>
+            <td><button type="button" class="btn btn-danger btn-sm"> Remove </button></td>
           </tr>
         </tbody>
       </table>
