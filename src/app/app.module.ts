@@ -32,7 +32,7 @@ import { SignupComponent } from './Component/user/signup/signup.component';
 
     AddGradesComponent,
     RegisterStudentsComponent,
-    ViewCourseComponent
+    ViewCourseComponent,
 
     ViewcourseComponent,
     ViewgradeComponent,
