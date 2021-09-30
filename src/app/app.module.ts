@@ -26,6 +26,7 @@ import { ViewgradeComponent } from './Component/student/viewgrade/viewgrade.comp
 import { PaymentComponent } from './Component/student/payment/payment.component';
 import { UserloginComponent } from './Component/user/userlogin/userlogin.component';
 import { SignupComponent } from './Component/user/signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { SignupComponent } from './Component/user/signup/signup.component';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

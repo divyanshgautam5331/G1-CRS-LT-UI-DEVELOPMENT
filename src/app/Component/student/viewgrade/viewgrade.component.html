@@ -8,9 +8,9 @@
     <form>
         <div class="form-group">
           <label for="SemesterID">Semester ID</label>
-          <input type="text" class="form-control" id="SemesterID" placeholder="Enter Semester ID">
+          <input type="text" [(ngModel)] = "semesterId" name="semesterId"  class="form-control" id="SemesterID" placeholder="Enter Semester ID">
         </div>
-        <button class="btn btn-dark"  type="submit" value="Submit">Submit</button>
+        <button class="btn btn-dark" (click)="getGradeCard()" type="submit" value="Submit">Submit</button>
       </form>
     </div>
 
