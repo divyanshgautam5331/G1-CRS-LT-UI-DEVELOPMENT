@@ -1,0 +1,104 @@
+<br>
+    
+    <div class ="header">
+        <div class="container">
+        <h4 class="site-title" id="listofcourse">List of Pending Payment</h4>
+    </div>
+    <div class ="header">
+    <div class="container">
+        <table class="table table-striped">
+            <thead class= "thead dark">
+              <tr>
+                <th scope="col">Course ID</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Details</th>
+                <th scope="col">Fees</th>
+                <th scope="col">Status</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">101</th>
+                <td>Java</td>
+                <td>Full Time</td>
+                <td>5000</td>
+                <td>Pending</td>
+              </tr>
+              <tr>
+                <th scope="row">102</th>
+                <td>Python</td>
+                <td>Full Time</td>
+                <td>3000</td>
+                <td>Pending</td>
+              </tr>
+              <tr>
+                <th scope="row">103</th>
+                <td>Angular</td>
+                <td>Full Time</td>
+                <td>5000</td>
+                <td>Pending</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr>
+    <h5 class="site-tagline" id="pay">Do you want to pay ?</h5>
+
+
+      <form>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" checked>Yes
+        </label>
+        &nbsp;
+        <label class="radio-inline">
+          <input type="radio"  name="optradio">No
+        </label>
+      </form>
+      <hr>
+    </div>
+    
+</div>
+
+
+    <div class="container">
+
+        <form>
+            <div class="form-group">
+              <label for="SemesterID">Course ID</label>
+              <input type="text" class="form-control" id="SemesterID" placeholder="Enter Course ID">
+            </div>
+            
+          
+          <h5 class="site-tagline" id="pay">Mode of Payment</h5>
+         
+            <label class="radio-inline">
+              <input type="radio" name="optradio" checked>Cash
+            </label>
+            &nbsp;
+            <label class="radio-inline">
+              <input type="radio"  name="optradio">Credit-Card
+            </label>
+            &nbsp;
+            <label class="radio-inline">
+              <input type="radio"  name="optradio">Debit-Card
+            </label>
+
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="text" class="form-control" id="amount" placeholder="Enter Amount to Pay">
+              </div>
+              <div class="form-group">
+                <label for="card">Card number</label>
+                <input type="text" class="form-control" id="card" placeholder="Enter Card Number">
+              </div>
+              <div class="form-group">
+                <label for="expiry">Expiry</label>
+                <input type="text" class="form-control" id="expiry" placeholder="Enter Card Expiry Date">
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="password" class="form-control" id="cvv" placeholder="Enter CVV">
+              </div>
+              <button class="btn btn-dark"  type="submit" value="Submit">Pay</button>
+          </form>
+    </div>

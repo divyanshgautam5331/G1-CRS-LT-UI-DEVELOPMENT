@@ -1,4 +1,4 @@
-export class Courses {
+export class RegisterCourse {
 
     public  courseId: number;
     public  courseName: String;
@@ -6,10 +6,9 @@ export class Courses {
     public  courseType: String;
     public courseDuration: String;
     public  courseDetails: String;
-    public courseSemesterId: number;
-    public professorId: number;
+    public  paymentStatus: String;
 
-    constructor(courseId: number,courseName: String,courseFee: number,courseType: String,courseDuration: String,courseDetails: String, courseSemesterId: number,professorId: number)
+    constructor(courseId: number,courseName: String,courseFee: number,courseType: String,courseDuration: String,courseDetails: String, paymentStatus: String)
     {
             this.courseId = courseId;
             this.courseName = courseName;
@@ -17,8 +16,8 @@ export class Courses {
             this.courseType = courseType;
             this.courseDuration = courseDuration;
             this.courseDetails = courseDetails;
-            this.courseSemesterId = courseSemesterId;
-            this.professorId = professorId;
+            this.paymentStatus = paymentStatus;
 
     }
+
 }
