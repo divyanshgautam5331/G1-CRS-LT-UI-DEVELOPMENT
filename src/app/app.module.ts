@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import  {FormsModule} from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,11 @@ import { ProfessorComponent } from './Component/professor/professor.component';
 import { AdminComponent } from './Component/admin/admin.component';
 import { UserComponent } from './Component/user/user.component';
 import { RegistercourseComponent } from './Component/student/registercourse/registercourse.component';
+import { AddcourseComponent } from './Component/admin/addcourse/addcourse.component';
+import { AddprofessorComponent } from './Component/admin/addprofessor/addprofessor.component';
+import { ApprovestudentComponent } from './Component/admin/approvestudent/approvestudent.component';
+import { GeneratereportcardComponent } from './Component/admin/generatereportcard/generatereportcard.component';
+import { ViewallcourseComponent } from './Component/admin/viewallcourse/viewallcourse.component';
 
 import { AddGradesComponent } from './Component/professor/add-grades/add-grades.component';
 import { RegisterStudentsComponent } from './Component/professor/register-students/register-students.component';
@@ -30,6 +37,13 @@ import { SignupComponent } from './Component/user/signup/signup.component';
     UserComponent,
     RegistercourseComponent,
 
+    AddcourseComponent,
+    AddprofessorComponent,
+    ApprovestudentComponent,
+    GeneratereportcardComponent,
+    ViewallcourseComponent,
+
+
     AddGradesComponent,
     RegisterStudentsComponent,
     ViewCourseComponent,
@@ -40,8 +54,10 @@ import { SignupComponent } from './Component/user/signup/signup.component';
     UserloginComponent,
     SignupComponent
 
+
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule

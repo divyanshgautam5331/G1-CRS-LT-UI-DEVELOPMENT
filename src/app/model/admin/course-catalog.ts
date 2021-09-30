@@ -1,6 +1,7 @@
 export class CourseCatalog {
 
 
+
     public  courseId: number;
     public  professorId: number;
     public  courseCatalogId: number;
