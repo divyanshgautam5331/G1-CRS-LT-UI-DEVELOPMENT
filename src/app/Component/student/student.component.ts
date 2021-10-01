@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentComponent implements OnInit {
 
+  showRegisteredCourse = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  viewRegisteredCourses() {
+    this.showRegisteredCourse = true;
   }
 
 }

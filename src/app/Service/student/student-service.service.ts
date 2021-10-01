@@ -16,7 +16,7 @@ export class StudentServiceService {
     return this.http.get(`${baseUrl}/availablecourse/${semId}`);
   }
 
-  registerCourse(student_id,semester_id,course_id){
+  registerCourse(student_id,semester_id,course_id): any{
     console.log('==20==',semester_id,course_id);
     
     

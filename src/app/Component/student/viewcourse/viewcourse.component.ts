@@ -10,18 +10,27 @@ export class ViewcourseComponent implements OnInit {
 
   semesterId: number;
 
+  getData = [];
+  viewDataCalled = false;
+  noCourseMsg = '';
+
   constructor(private _httpService:StudentServiceService) { }
 
   ngOnInit(): void {
   }
 
   getRegisteredCourseDetails(){
+    this.getData = [];
+    this.viewDataCalled = true;
     this._httpService.viewRegisteredCourse(101,this.semesterId).subscribe(
-      res => {
+      (res:any[]) => {
         console.log('==21==',res);
+        this.getData = res;
         
       },
       error => {
+
+        this.noCourseMsg = error?.error;
         console.log('===26==', error);
        
         

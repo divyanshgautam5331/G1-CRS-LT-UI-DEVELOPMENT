@@ -11,14 +11,17 @@ export class ViewgradeComponent implements OnInit {
   constructor(private _httpService:StudentServiceService) { }
 
   semesterId: number;
+  getData:any[];
   ngOnInit(): void {
   }
 
   getGradeCard(){
     {
       this._httpService.viewGradeCard(101,this.semesterId).subscribe(
-        res => {
+        (res:any[]) => {
           console.log('==21==',res);
+          this.getData=res;
+
           
         },
         error => {

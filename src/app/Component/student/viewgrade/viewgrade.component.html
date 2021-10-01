@@ -32,7 +32,13 @@
                 
               </tr>
             </thead>
-            <tbody>
+
+            <tr *ngFor='let user of getData'>
+              <th scope="row">{{ user.courseId}}</th>
+              <td>{{ user.courseName}}</td>
+              <td>{{ user.grade}}</td>
+            </tr>
+            <!-- <tbody>
               <tr>
                 <th scope="row">101</th>
                 <td>Java</td>
@@ -48,6 +54,6 @@
                 <td>Angular</td>
                 <td>C</td>
               </tr>
-            </tbody>
+            </tbody> -->
           </table>
     </div>

@@ -26,16 +26,16 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" routerLink="/student/home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="registercourse.html">Register Course</a>
+              <a class="nav-link" [routerLink]="['register-course']">Register Course</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="viewcourse.html">View Courses</a>
+              <a class="nav-link" [routerLink]="['courses']">View Courses</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="viewgradecard.html">View Grade Card</a>
+                <a class="nav-link" [routerLink]="['grade-card']">View Grade Card</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="fees.html">Payment</a>
@@ -51,5 +51,6 @@
       </nav>
     </div>
 </div>
+<router-outlet></router-outlet>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <form>
     <div class="form-group">
       <label for="SemesterID">Semester ID</label>
-      <input [(ngModel)] = "semesterId" type="text" name = "semesterID" class="form-control" id="SemesterID" placeholder="Enter Semester ID">
+      <input [(ngModel)] = "semesterId" type="text" name = "semesterID" (blur)="getAvailableCourse()" class="form-control" id="SemesterID" placeholder="Enter Semester ID">
     </div>
    
    
@@ -18,17 +18,21 @@
     </div>
     <button class="btn btn-dark"  type="submit" (click)="registerNewCourse()" value="Submit">Submit</button>
   </form>
+
+  
 </div>
 
 <hr>
 <br>
 
-<div class ="header">
+
+
+<div class="container">
+  <div class ="header">
     <div class="container">
     <h2 class="site-title" id="listofcourse">List of Available Courses</h2>
 </div>
-
-<div class="container">
+</div>
     <table class="table table-striped">
         <thead class= "thead dark">
           <tr>
@@ -40,13 +44,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">101</th>
-            <td>Java</td>
-            <td>Full Time</td>
-            <td>5000</td>
+          <tr *ngFor="let data of getData">
+            <th scope="row">{{ data.courseId}}</th>
+            <td>{{ data.courseName}}</td>
+            <td>{{ data.courseDetails}}</td>
+            <td>{{ data.courseFee}}</td>
           </tr>
-          <tr>
+          <!-- <tr>
             <th scope="row">102</th>
             <td>Python</td>
             <td>Full Time</td>
@@ -57,7 +61,7 @@
             <td>Angular</td>
             <td>Full Time</td>
             <td>5000</td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
 </div>

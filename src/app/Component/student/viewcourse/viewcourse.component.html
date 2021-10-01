@@ -22,12 +22,12 @@
 <hr>
 <br>
 
-<div class ="header">
+<div *ngIf="getData.length" class="container">
+  <div class ="header">
     <div class="container">
     <h2 class="site-title" id="listofcourse">List of Registered Courses</h2>
 </div>
-
-<div class="container">
+  </div>
     <table class="table table-striped">
         <thead class= "thead dark">
           <tr>
@@ -39,27 +39,31 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">101</th>
-            <td>Java</td>
-            <td>Full Time</td>
-            <td>5000</td>
+          <tr *ngFor='let user of getData'>
+            <th scope="row">{{ user.courseId}}</th>
+            <td>{{ user.courseName}}</td>
+            <td>{{ user.courseDetails}}</td>
+            <td>{{ user.courseFee}}</td>
             <td><button type="button" class="btn btn-danger btn-sm"> Remove </button></td>
           </tr>
-          <tr>
+          <!-- <tr>
             <th scope="row">102</th>
             <td>Python</td>
             <td>Full Time</td>
             <td>3000</td>
             <td><button type="button" class="btn btn-danger btn-sm"> Remove </button></td>
-          </tr>
-          <tr>
+          </tr> -->
+          <!-- <tr>
             <th scope="row">103</th>
             <td>Angular</td>
             <td>Full Time</td>
             <td>5000</td>
             <td><button type="button" class="btn btn-danger btn-sm"> Remove </button></td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
+</div>
+
+<div *ngIf="!getData.length && viewDataCalled">
+<h2>{{noCourseMsg}}</h2>
 </div>
