@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Document</title>
+    <title>professor</title>
 </head>
 <body>
 
@@ -19,17 +19,6 @@
       </div>
     </header>
     <br>
-    <!-- <nav class="navbar navbar-dark bg-dark">
-      <div class="container">
-        <ul>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Register Course</a></li>
-        <li><a href="#">View Courses</a></li>
-        <li><a href="#">View Grade Card</a></li>
-        <li><a href="#">Payment</a></li>
-      </ul>
-      </div>
-    </nav> -->
     <div class="container"> 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         
@@ -41,19 +30,19 @@
           <ul class="navbar-nav mr-auto">
             
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
             </li>
-			<li class="nav-item">
-              <a class="nav-link" href="showcourse.html">Show Course</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Addgrades.html">Add Grades</a>
+			      <li class="nav-item">
+            <a class="nav-link"  [routerLink]="['/viewcourse']">Show Course</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="registerstudents.html"> Registered students</a>
+              <a class="nav-link" [routerLink]="['/addgrade']">Add Grades</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="professor.html">Logout</a>
+              <a class="nav-link" [routerLink]="['/viewregisteredtudents']"> Registered students</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/logout']">Logout</a>
               </li>
           </ul>
           <span class="navbar-text">
@@ -66,3 +55,4 @@
   </div>
 </body>
 </html>
+<router-outlet></router-outlet>

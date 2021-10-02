@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NGXLogger } from 'ngx-logger';
 
 @Component({
   selector: 'app-professor',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfessorComponent implements OnInit {
 
-  constructor() { }
+  
+  constructor(private logger: NGXLogger) {
+    this.logger.debug("inside the constructor")
+  }
 
+  
   ngOnInit(): void {
   }
 
+  
+  
 }

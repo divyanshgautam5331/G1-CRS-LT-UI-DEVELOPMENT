@@ -19,13 +19,16 @@ import { ViewallcourseComponent } from './Component/admin/viewallcourse/viewallc
 
 import { AddGradesComponent } from './Component/professor/add-grades/add-grades.component';
 import { RegisterStudentsComponent } from './Component/professor/register-students/register-students.component';
-import { ViewCourseComponent } from './Component/professor/view-course/view-course.component';
+
 
 import { ViewcourseComponent } from './Component/student/viewcourse/viewcourse.component';
 import { ViewgradeComponent } from './Component/student/viewgrade/viewgrade.component';
 import { PaymentComponent } from './Component/student/payment/payment.component';
 import { UserloginComponent } from './Component/user/userlogin/userlogin.component';
 import { SignupComponent } from './Component/user/signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+import { ShowCourseComponent } from './Component/professor/show-course/show-course.component';
 
 
 @NgModule({
@@ -46,13 +49,14 @@ import { SignupComponent } from './Component/user/signup/signup.component';
 
     AddGradesComponent,
     RegisterStudentsComponent,
-    ViewCourseComponent,
+    ShowCourseComponent,
 
     ViewcourseComponent,
     ViewgradeComponent,
     PaymentComponent,
     UserloginComponent,
-    SignupComponent
+    SignupComponent,
+    
 
 
   ],
@@ -60,7 +64,9 @@ import { SignupComponent } from './Component/user/signup/signup.component';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    LoggerModule.forRoot({serverLoggingUrl: '/users/logs', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR})
   ],
   providers: [],
   bootstrap: [AppComponent]

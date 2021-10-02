@@ -17,26 +17,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">201</th>
-                <td>Kabila</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <th scope="row">202</th>
-                <td>Sneha</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <th scope="row">203</th>
-                <td>Sanjay</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <th scope="row">204</th>
-                <td>Divyansh</td>
-                <td>2</td>
-              </tr>
+              <tr *ngFor='let stud of student'>
+                <td>{{stud.studentId}}</td>
+                <td>{{stud.studentName}}</td>
+                <td>{{stud.semester_id}}</td>
+                </tr>
             </tbody>
           </table>
     </div>

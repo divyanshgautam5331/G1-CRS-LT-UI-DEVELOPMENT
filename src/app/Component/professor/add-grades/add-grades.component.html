@@ -1,62 +1,35 @@
 <br>
 <div class ="header">
     <div class="container">
-    <h2 class="site-title" id="listofcourse">List of Available Courses</h2>
-</div>
-</div>
-<div class ="header">
-<div class="container">
-    <table class="table table-striped">
-        <thead class= "thead dark">
-          <tr>
-            <th scope="col">Student Id</th>
-            <th scope="col">Course ID</th>
-            <th scope="col">Course Name</th>
-            
-            </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">201</th>
-            <th scope="row">101</th>
-            <td>Java</td>
-          </tr>
-          <tr>
-            <th scope="row">202</th>
-            <th scope="row">102</th>
-            <td>Python</td>
-          </tr>
-          <tr>
-            <th scope="row">203</th>
-            <th scope="row">103</th>
-            <td>Angular</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
-</div>
-<div class ="header">
-    <div class="container">
     <h1 class="site-title" id="registercourse">Add Grade</h1>
 </div>
 </div>
                 <div class="container">
                     <form>
-                        <div class="form-group">
-                          <label for="SemesterID">Course ID</label>
-                          <input type="text" class="form-control" id="CourseID" placeholder="Enter Course ID">
+                      <div class="form-group">
+                        <label for="CourseId">Course ID</label>
+                        <input type="text" name ="CourseId" [(ngModel)]="grade.courseId" class="form-control" id="CourseID" placeholder="Enter Course ID">
+                      </div>
+                     
+                      <div class="form-group">
+                        <label for="CourseName">Course Name</label>
+                        <input type="text" name ="CourseName" [(ngModel)]="grade.courseName" class="form-control" id="CourseName" placeholder="Enter Course Name">
+                      </div>
+                      <div class="form-group">
+                          <label for="StudentId">Student ID</label>
+                          <input type="text" name ="StudentId" [(ngModel)]="grade.studentId" class="form-control" id="StudentID" placeholder="Enter Student ID">
                         </div>
-                       
                         <div class="form-group">
-                          <label for="CourseID">Course Name</label>
-                          <input type="text" class="form-control" id="CourseName" placeholder="Enter Course Name">
+                          <label for="SemesterId">Semester ID</label>
+                          <input type="text" name ="SemesterId" [(ngModel)]="grade.semesterId" class="form-control" id="SemesterID" placeholder="Enter Semester ID">
                         </div>
+                        
                         <div class="form-group">
-                            <label for="CourseID">Add Grade</label>
-                            <input type="text" class="form-control" id="AddGrade" placeholder="Enter Grade">
+                            <label for="AddGrade">Add Grade</label>
+                            <input type="text" name ="addGrade" [(ngModel)]="grade.grade" class="form-control" id="AddGrade" placeholder="Enter Grade">
                           </div>
 
-                        <button class="btn btn-dark"  type="submit" value="Submit">Submit</button>
+                        <button class="btn btn-dark"  type="submit" value="Submit" (click)="addStudentGrade()">Submit</button>
                       </form>
                     </div>
 				

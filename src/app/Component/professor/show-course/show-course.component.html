@@ -1,0 +1,39 @@
+
+
+<hr>
+<br>
+    <div class ="header">
+        <div class="container">
+        <h2 class="site-title" id="listofcourse">List of Available Courses</h2>
+    </div>
+  </div>
+      
+    <div class ="header">
+    <div class="container">
+        <table class="table table-striped">
+            <thead class= "thead dark">
+              <tr>
+                <th scope="col">Course ID</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Course Type</th>
+                <th scope="col">Course Details</th>
+                <th scope="col">Course Fee</th>
+                <th scope="col">Semester Id</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor='let c of course'>
+                  <td>{{c.courseId}}</td>
+                  <td>{{c.courseName }}</td>
+                  <td>{{c.courseType }}</td>
+                  <td>{{c.courseDetails }}</td>
+                  <td>{{c.courseFee }}</td>
+                  <td>{{c.courseSemesterId }}</td>
+                  <td>{{c.courseProfessorId }}</td>
+                </tr>
+          </tbody>
+           
+          </table>
+  </div>
+  </div>
