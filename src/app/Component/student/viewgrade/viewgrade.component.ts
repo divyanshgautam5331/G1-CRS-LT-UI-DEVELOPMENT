@@ -8,16 +8,19 @@ import { StudentServiceService } from 'src/app/Service/student/student-service.s
 })
 export class ViewgradeComponent implements OnInit {
 
-  constructor(private _httpService:StudentServiceService) { }
+  constructor(private _httpService:StudentServiceService) { 
+    this.studentId = localStorage.getItem('studentId');
+  }
 
   semesterId: number;
   getData:any[];
+  studentId:any;
   ngOnInit(): void {
   }
 
   getGradeCard(){
     {
-      this._httpService.viewGradeCard(101,this.semesterId).subscribe(
+      this._httpService.viewGradeCard(this.studentId,this.semesterId).subscribe(
         (res:any[]) => {
           console.log('==21==',res);
           this.getData=res;

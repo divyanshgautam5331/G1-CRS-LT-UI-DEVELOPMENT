@@ -16,9 +16,12 @@ export class RegistercourseComponent implements OnInit {
   semesterId: number;
   courseId: number;
   getData:any[];
+  studentId:any;
+
 
 
   constructor(private _httpService:StudentServiceService) { 
+     this.studentId = localStorage.getItem('studentId');
   }
 
   ngOnInit(): void {
@@ -34,21 +37,12 @@ export class RegistercourseComponent implements OnInit {
     
   }
 
-  // viewAvailableCourse(){
-  //   this._httpService.getViewAvailableCourse(this.semester_id).subscribe(
-  //     (res : number)=>{
-  //       //console.log(res);
-  //      this.logger.debug(res);
-  //     this.semester_id = res;}
-  //   );
 
   registerNewCourse(){
 
-    this._httpService.registerCourse(101,this.semesterId,this.courseId).subscribe(
+    this._httpService.registerCourse(this.studentId,this.semesterId,this.courseId).subscribe(
       (res)=>{
                console.log(res);
-             // this.logger.debug(res);
-           //this.getData = res;
           },
           (error) => {
             console.log('==43==',error);

@@ -7,10 +7,12 @@ import { RegistercourseComponent } from './Component/student/registercourse/regi
 import { StudentComponent } from './Component/student/student.component';
 import { ViewcourseComponent } from './Component/student/viewcourse/viewcourse.component';
 import { ViewgradeComponent } from './Component/student/viewgrade/viewgrade.component';
+import { SignupComponent } from './Component/user/signup/signup.component';
 import { UserloginComponent } from './Component/user/userlogin/userlogin.component';
 
 const routes: Routes = [
   { path : '', component:  UserloginComponent },
+  { path : 'register', component:  SignupComponent },
   { path : 'student/home',component: StudentComponent,
   
   children:[

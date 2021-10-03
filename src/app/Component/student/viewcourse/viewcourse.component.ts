@@ -14,7 +14,10 @@ export class ViewcourseComponent implements OnInit {
   viewDataCalled = false;
   noCourseMsg = '';
   details=[];
-  constructor(private _httpService:StudentServiceService) { }
+  studentId:any;
+  constructor(private _httpService:StudentServiceService) {
+    this.studentId = localStorage.getItem('studentId');
+   }
 
   ngOnInit(): void {
   }
@@ -22,7 +25,7 @@ export class ViewcourseComponent implements OnInit {
   getRegisteredCourseDetails(){
     this.getData = [];
     this.viewDataCalled = true;
-    this._httpService.viewRegisteredCourse(101,this.semesterId).subscribe(
+    this._httpService.viewRegisteredCourse(this.studentId,this.semesterId).subscribe(
       (res:any[]) => {
         console.log('==21==',res);
         this.getData = res;
@@ -40,7 +43,7 @@ export class ViewcourseComponent implements OnInit {
 
   removeRegisteredCourse(semesterId,courseId){
 
-    this._httpService.removeCourse(101,semesterId,courseId).subscribe(
+    this._httpService.removeCourse(this.studentId,semesterId,courseId).subscribe(
       
 
       res=>{
