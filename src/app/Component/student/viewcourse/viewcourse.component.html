@@ -44,7 +44,7 @@
             <td>{{ user.courseName}}</td>
             <td>{{ user.courseDetails}}</td>
             <td>{{ user.courseFee}}</td>
-            <td><button type="button" class="btn btn-danger btn-sm"> Remove </button></td>
+            <td><button type="button" class="btn btn-danger btn-sm" (click)="removeRegisteredCourse(semesterId,user.courseId)"> Remove </button></td>
           </tr>
           <!-- <tr>
             <th scope="row">102</th>

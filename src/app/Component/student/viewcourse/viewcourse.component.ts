@@ -13,7 +13,7 @@ export class ViewcourseComponent implements OnInit {
   getData = [];
   viewDataCalled = false;
   noCourseMsg = '';
-
+  details=[];
   constructor(private _httpService:StudentServiceService) { }
 
   ngOnInit(): void {
@@ -36,6 +36,31 @@ export class ViewcourseComponent implements OnInit {
         
       }
     )
+  }
+
+  removeRegisteredCourse(semesterId,courseId){
+
+    this._httpService.removeCourse(101,semesterId,courseId).subscribe(
+      
+
+      res=>{
+        console.log("inside subscribe");
+      
+      for(var i=0;i<this.getData.length;i++){
+        if(courseId===this.getData[i].courseId){
+          const index = this.details.indexOf(this.getData[i])
+          this.getData.splice(index,1)
+          
+        }
+      }
+     },
+     
+     error => {
+
+      this.noCourseMsg = error?.error;
+      console.log('===failed==', error);}
+      )
+
   }
 
 }

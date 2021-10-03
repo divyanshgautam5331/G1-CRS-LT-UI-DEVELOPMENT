@@ -28,7 +28,7 @@ export class StudentServiceService {
   }
 
   removeCourse(student_id,semester_id,course_id){
-    return this.http.delete(`${baseUrl}/removecourse/${student_id}/${semester_id}/${course_id}`);
+    return this.http.post(`${baseUrl}/removecourse/${student_id}/${semester_id}/${course_id}`,null);
   }
 
   paymentList(student_id){

@@ -18,14 +18,14 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">101</th>
-                <td>Java</td>
-                <td>Full Time</td>
-                <td>5000</td>
-                <td>Pending</td>
+              <tr *ngFor="let data of getData">
+                <th scope="row">{{ data.courseId}}</th>
+                <td>{{ data.courseName}}</td>
+                <td>{{ data.courseDetails}}</td>
+                <td>{{ data.courseFee}}</td>
+                <td>{{data.paymentStatus}}</td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <th scope="row">102</th>
                 <td>Python</td>
                 <td>Full Time</td>
@@ -38,7 +38,7 @@
                 <td>Full Time</td>
                 <td>5000</td>
                 <td>Pending</td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
           <hr>

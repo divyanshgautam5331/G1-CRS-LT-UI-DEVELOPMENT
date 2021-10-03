@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfessorComponent } from './Component/professor/professor.component';
+import { PaymentComponent } from './Component/student/payment/payment.component';
 //import { ViewCourseComponent } from './Component/professor/view-course/view-course.component';
 import { RegistercourseComponent } from './Component/student/registercourse/registercourse.component';
 import { StudentComponent } from './Component/student/student.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
  // { path: '', redirectTo: 'customer', pathMatch: 'full'},
   { path: 'register-course', component: RegistercourseComponent },
   { path: 'courses', component: ViewcourseComponent},
-  { path: 'grade-card', component:ViewgradeComponent }
+  { path: 'grade-card', component:ViewgradeComponent },
+  {path:'pay-fees',component:PaymentComponent}
   // children: [
   //   { path: '', redirectTo: 'normalOrder', pathMatch: 'full' },
   //   { path: 'normalOrder', component:  NormalordercomponentComponent},
