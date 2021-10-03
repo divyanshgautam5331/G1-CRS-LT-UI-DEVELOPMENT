@@ -4,15 +4,15 @@ import { ProfessorComponent } from './Component/professor/professor.component';
 import { AddGradesComponent } from './Component/professor/add-grades/add-grades.component';
 import { RegisterStudentsComponent } from './Component/professor/register-students/register-students.component';
 import { ShowCourseComponent } from './Component/professor/show-course/show-course.component';
+import { UserloginComponent } from './Component/user/userlogin/userlogin.component';
 
 const routes: Routes = [
   
     { path: '', redirectTo: 'home', pathMatch: 'full'},
-  //{ path: 'home', component: ProfessorComponent} ,
     { path: 'viewcourse', component: ShowCourseComponent },
     { path: 'addgrade', component: AddGradesComponent},
     { path: 'viewregisteredtudents', component: RegisterStudentsComponent},
-    { path: 'logout', redirectTo: 'logout'},
+    { path: 'logout', component: UserloginComponent},
 
    
   
